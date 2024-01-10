@@ -35,6 +35,7 @@ jobs:
       - run: npm i
       - run: npm ci
       - run: |
+          npm config list
           cat > .npmrc
           echo _auth = ${{ secrets.PAT }} >> .npmrc
           echo always-auth = true >> .npmrc
