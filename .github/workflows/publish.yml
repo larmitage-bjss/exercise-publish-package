@@ -4,6 +4,9 @@ on:
   push:
     branches: main
 
+env:
+  NODE_VERSION: 16
+
 defaults:
   run:    
     working-directory: sample-packages/npm
@@ -15,7 +18,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: env.NODE_VERSION
+      - run: npm i
       - run: npm ci
       - run: npm test
 
@@ -26,7 +30,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: env.NODE_VERSION
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm publish
