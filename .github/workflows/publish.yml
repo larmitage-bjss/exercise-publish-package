@@ -33,9 +33,4 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: |
-          echo -e 'larmitage-bjss\n${{ secrets.PAT }}' | npm login \
-            --registry=https://npm.pkg.github.com/ \
-            --auth-type=legacy \
-            -e=laura.armitage@bjss.com
       - run: npm publish
