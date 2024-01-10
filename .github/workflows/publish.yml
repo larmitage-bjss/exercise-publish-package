@@ -36,6 +36,7 @@ jobs:
       - run: npm ci
       - run: |
           npm config list
+          echo "----"
           cat > .npmrc
           echo _auth = ${{ secrets.PAT }} >> .npmrc
           echo always-auth = true >> .npmrc
@@ -44,6 +45,8 @@ jobs:
           # echo //npm.pkg.github.com/:username=larmitage-bjss >> .npmrc
           # echo //npm.pkg.github.com/:_password=${{ secrets.PAT }} >> .npmrc
           echo //npm.pkg.github.com/:_auth=${{ secrets.PAT }} >> .npmrc
+          echo "----"
           cat .npmrc
+          echo "----"
           npm login --scope=@larmitage-bjss --registry=https://npm.pkg.github.com/
       - run: npm publish
