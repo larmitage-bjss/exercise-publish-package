@@ -44,6 +44,7 @@ jobs:
           echo @larmitage-bjss:registry="https://npm.pkg.github.com/" >> .npmrc
           # echo //npm.pkg.github.com/:username=larmitage-bjss >> .npmrc
           # echo //npm.pkg.github.com/:_password=${{ secrets.PAT }} >> .npmrc
+          echo //npm.pkg.github.com/:always-auth=true >> .npmrc
           echo //npm.pkg.github.com/:_auth=${{ secrets.PAT }} >> .npmrc
           echo //npm.pkg.github.com/:_authToken=${{ secrets.PAT }} >> .npmrc
           echo "----"
