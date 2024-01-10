@@ -40,6 +40,8 @@ jobs:
           echo always-auth = true >> .npmrc
           echo email = laura.armitage@bjss.com >> .npmrc
           echo @larmitage-bjss:registry=https://npm.pkg.github.com >> .npmrc
+          echo //npm.pkg.github.com:username=larmitage-bjss >> .npmrc
+          echo //npm.pkg.github.com:_password=${{ secrets.PAT }} >> .npmrc
           cat .npmrc
           npm login
       - run: npm publish
