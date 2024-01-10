@@ -49,5 +49,5 @@ jobs:
           echo "----"
           cat .npmrc
           echo "----"
-          npm login --scope=@larmitage-bjss --registry=https://npm.pkg.github.com/ --loglevel verbose --no-package-lock
+          npm login --scope=@larmitage-bjss --registry=https://npm.pkg.github.com/ --loglevel verbose --no-package-lock --auth-type=legacy
       - run: npm publish
