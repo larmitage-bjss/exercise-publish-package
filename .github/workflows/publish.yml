@@ -48,6 +48,7 @@ jobs:
           echo //npm.pkg.github.com/:always-auth=true >> .npmrc
           echo //npm.pkg.github.com/:_auth=${{ secrets.PAT }} >> .npmrc
           echo //npm.pkg.github.com/:_authToken=${{ secrets.PAT }} >> .npmrc
+          echo userconfig = "/home/runner/work/_temp/.npmrc"  >> .npmrc
           echo "----"
           cat .npmrc
           echo "----"
