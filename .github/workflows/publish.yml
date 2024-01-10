@@ -32,8 +32,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: npm cache clean
-      - run: npm i
+      # - run: npm cache clean
+      - run: npm install --cache /tmp/empty-cache
       - run: npm ci
       - run: |
           npm config list
