@@ -1,6 +1,6 @@
 {
   "name": "@larmitage-bjss/test-npm-package",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/larmitage-bjss/exercise-publish-package.git"
